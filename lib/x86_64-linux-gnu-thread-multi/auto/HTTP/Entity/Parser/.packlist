@@ -1,0 +1,10 @@
+/var/www/html/bugzilla-5.0.3/lib/HTTP/Entity/Parser.pm
+/var/www/html/bugzilla-5.0.3/lib/HTTP/Entity/Parser/JSON.pm
+/var/www/html/bugzilla-5.0.3/lib/HTTP/Entity/Parser/MultiPart.pm
+/var/www/html/bugzilla-5.0.3/lib/HTTP/Entity/Parser/OctetStream.pm
+/var/www/html/bugzilla-5.0.3/lib/HTTP/Entity/Parser/UrlEncoded.pm
+/var/www/html/bugzilla-5.0.3/lib/man/man3/HTTP::Entity::Parser.3pm
+/var/www/html/bugzilla-5.0.3/lib/man/man3/HTTP::Entity::Parser::JSON.3pm
+/var/www/html/bugzilla-5.0.3/lib/man/man3/HTTP::Entity::Parser::MultiPart.3pm
+/var/www/html/bugzilla-5.0.3/lib/man/man3/HTTP::Entity::Parser::OctetStream.3pm
+/var/www/html/bugzilla-5.0.3/lib/man/man3/HTTP::Entity::Parser::UrlEncoded.3pm

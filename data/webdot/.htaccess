@@ -1,0 +1,47 @@
+# Restrict access to .dot files to the public webdot server at research.att.com
+# if research.att.com ever changes their IP, or if you use a different
+# webdot server, you'll need to edit this
+<FilesMatch \.dot$>
+  <IfModule mod_version.c>
+    <IfVersion < 2.4>
+      Allow from 192.20.225.0/24
+      Deny from all
+    </IfVersion>
+    <IfVersion >= 2.4>
+      Require ip 192.20.225.0/24
+      Require all denied
+    </IfVersion>
+  </IfModule>
+  <IfModule !mod_version.c>
+    Allow from 192.20.225.0/24
+    Deny from all
+  </IfModule>
+</FilesMatch>
+
+ # Allow access to .png files created by a local copy of 'dot'
+ <FilesMatch \.png$>
+  <IfModule mod_version.c>
+    <IfVersion < 2.4>
+      Allow from all
+    </IfVersion>
+    <IfVersion >= 2.4>
+      Require all granted
+    </IfVersion>
+  </IfModule>
+  <IfModule !mod_version.c>
+    Allow from all
+  </IfModule>
+</FilesMatch>
+
+# And no directory listings, either.
+<IfModule mod_version.c>
+  <IfVersion < 2.4>
+    Deny from all
+  </IfVersion>
+  <IfVersion >= 2.4>
+    Require all denied
+  </IfVersion>
+</IfModule>
+<IfModule !mod_version.c>
+  Deny from all
+</IfModule>
